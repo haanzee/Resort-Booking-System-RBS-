@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+   
+     <table class="table table-secondary " align='center'>
+      <tbody>
+        <tr>
+          <td colspan="3" align='center'><b>Confirmed Booking Details</b> </td> 
+        </tr>
+        
+        {% for bk in res %}
+        <tr>
+           <td><b>Name</b></td><td>:</td><td>{{ bk.bname }}</td> 
+        </tr>
+        <tr> 
+           <td><b>Contact No.</b></td><td>:</td><td>{{ bk.bcontact }}</td>  
+        </tr>
+        <tr>  
+           <td><b>Resort</b></td><td>:</td><td>{{ bk.bresort }}</td>  
+        </tr>   
+        <tr>  
+          <td><b>Referene</b></td><td>:</td><td>{{ bk.bref }}</td>  
+        </tr>   
+        <tr>  
+          <td><b>Booking date</b></td><td>:</td><td>{{ bk.bdate.strftime('%d-%m-%Y') }}</td>  
+        </tr>   
+        <tr>  
+          <td><b>Day / Night</b></td><td>:</td><td>{{ bk.bdaynight }}</td>  
+        </tr>   
+        <tr>  
+          <td><b>Rent / Cattering</b></td><td>:</td><td>{{ bk.brentcat }}</td>  
+        </tr>   
+        <tr>  
+          <td><b>Confirmed Gathering</b></td><td>:</td><td>{{ bk.bgathconf }}</td>  
+        </tr> 
+        <tr>  
+          <td><b>Booking By</b></td><td>:</td><td>{{ bk.author.username }}</td>  
+        </tr> 
+          <td colspan="3" align="center"><font size="2px"><a href="/sindex"><Button class="btn btn-outline-primary btn-lg" input type="button" >   Search Again  </Button></a></font></td>
+        </tr>
+           {% endfor %}
+
+         </tbody>
+      </table>
+   </div>
+ {% endblock %}

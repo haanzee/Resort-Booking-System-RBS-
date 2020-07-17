@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+   
+     <table align='center' class='table table-striped '>
+      <tbody>
+        <tr>
+          <td colspan="4" align='center'><b> Booking Authorization </b></td> 
+        </tr>
+              <tr>
+                 <td><b>Name</b></td><td>:</td><td>{{ rec.bname }}</td><td></td> 
+              </tr>
+              <tr> 
+                 <td><b>Contact No.</b></td><td>:</td><td>{{ rec.bcontact }}</td><td></td>  
+              </tr>
+              <tr>  
+                 <td><b>Resort</b></td><td>:</td><td>{{ rec.bresort }}</td><td></td>  
+              </tr>   
+              <tr>  
+                <td><b>Referene</b></td><td>:</td><td>{{ rec.bref }}</td><td></td>  
+              </tr>   
+              <tr>  
+                <td><b>Booking date</b></td><td>:</td><td>{{ rec.bdate.strftime('%d-%m-%Y') }}</td><td></td>  
+              </tr>   
+              <tr>  
+                <td><b>Day / Night</b></td><td>:</td><td>{{ rec.bdaynight }}</td><td></td>  
+              </tr>   
+              <tr>  
+                <td><b>Rent / Cattering</b></td><td>:</td><td>{{ rec.brentcat }}</td><td></td>  
+              </tr>   
+              <tr>  
+                <td><b>Confirmed Gathering</b></td><td>:</td><td>{{ rec.bgathconf }}</td><td></td>  
+              </tr> 
+              <tr>  
+                <td><b>Booking By</b></td><td>:</td><td>{{ rec.author.username }}</td><td></td>  
+              </tr> 
+            <tr>       
+                  <td><font size="2px"><a href="/auth/{{rec.id}}"><Button class="btn btn-outline-success" input type="button">Authorised</Button></a></font></td>
+                  <td><font size="2px"><a href="/UpdateBooking/{{rec.id}}"><Button class="btn btn-outline-success" input type="button"> Update </Button></a></font></td>
+                  <td><font size="2px"><a href="/Delete/{{rec.id}}"><Button class="btn btn-outline-success" input type="button"> Delete </Button></a></font></td>
+                  <td><font size="2px"><a href="/resort_indexp/{{rec.bresort}}"><Button class="btn btn-outline-success" input type="button" > Back </Button></a></font></td>
+
+             </tr>
+
+         </tbody>
+      </table>
+   </div>
+ {% endblock %}

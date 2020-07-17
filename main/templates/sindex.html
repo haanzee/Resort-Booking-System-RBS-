@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+  
+      <table class="table table-striped" align='center' class='table table-sm'>
+      <tbody>
+        <tr><td colspan="3" align="center"><b>Confirmed Booking (Resort Wise)</b></td></tr>
+         {% for bk in res %}
+         <tr>
+           <td width='140px'><a href="/sindexmonth/{{ bk.bresort }}">{{ bk.bresort }}</a>
+              </td><td>:</td> <td>{{ bk.count }}</td>
+         </tr>
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+ 
+
+   </div>
+ {% endblock %}

@@ -1,0 +1,205 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-section">
+		<form action="" method="POST">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				
+				<div class="form-group">
+					{{ form.bname.label(class="form-control-label")}}
+
+					{% if form.bname.errors %}
+						{{ form.bname(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bname.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bname(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+
+				<div class="form-group">
+					{{ form.baddress.label(class="form-control-label")}}
+
+					{% if form.baddress.errors %}
+						{{ form.baddress(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.baddress.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.baddress(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+
+
+				<div class="form-group">
+					{{ form.bcontact.label(class="form-control-label")}}
+
+					{% if form.bcontact.errors %}
+						{{ form.bcontact(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bcontact.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bcontact(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bresort.label(class="form-control-label")}}
+
+					{% if form.bresort.errors %}
+						{{ form.bresort(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bresort.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bresort(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+
+				<div class="form-group">
+					{{ form.bref.label(class="form-control-label")}}
+
+					{% if form.bref.errors %}
+						{{ form.bref(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bref.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bref(class="form-control form-control-lg")}}
+					{% endif %}	
+
+				</div>
+
+
+				<div class="form-group">
+					{{ form.bdate.label(class="form-control-label")}}
+					{% if form.bdate.errors %}
+						{{ form.bdate(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bdate.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bdate(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bdaynight.label(class="form-control-label")}}
+					{% if form.bdaynight.errors %}
+						{{ form.bdaynight(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bdaynight.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bdaynight(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.brentcat.label(class="form-control-label")}}
+					{% if form.brentcat.errors %}
+						{{ form.brentcat(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.brentcat.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.brentcat(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bcat.label(class="form-control-label")}}
+					{% if form.bcat.errors %}
+						{{ form.bcat(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bcat.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bcat(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bcatveg.label(class="form-control-label")}}
+					{% if form.bcatveg.errors %}
+						{{ form.bcatveg(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bcatveg.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bcatveg(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bgathconf.label(class="form-control-label")}}
+					{% if form.bgathconf.errors %}
+						{{ form.bgathconf(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bgathconf.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bgathconf(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+				<div class="form-group">
+					{{ form.bnote.label(class="form-control-label")}}
+					{% if form.bnote.errors %}
+						{{ form.bnote(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.bnote.errors %}
+								<span>{{ error}}  </span>
+							{% endfor%}
+						</div>
+					{% else %}							
+							{{ form.bnote(class="form-control form-control-lg")}}
+					{% endif %}	
+				</div>
+
+
+
+
+
+
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info")}}
+			</div>	
+		</form>
+	</div>
+	<div class="border-top pt=3">
+		<small class="text-muted">
+			Already Have An Account? <a class="ml-2" href="{{ url_for('users.login')}}"> Sign In </a>
+			
+		</small>
+
+	</div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+ <style> 
+            body { 
+                counter-reset: myCounter; 
+            } 
+              
+            h6::before { 
+                counter-increment: myCounter; 
+                content: " " counter(myCounter) " "; 
+            } 
+            .geeks { 
+                color:#090; 
+                font-size:18px;
+                font-weight: normal; 
+                text-align:center; 
+            } 
+            .gfg { 
+                text-align:center; 
+                font-size:18px; 
+            } 
+        </style>
+   <div class="content-section">
+   <div class = "gfg">{{ bresort }}</div> 
+      <table class="table table-striped" align='center' class='table table-sm'>
+      <tbody>
+       <thead>
+       <tr>
+
+        <td>No.</td>
+        <td><b>Name</b></td>
+        <td><b>Function Date</b></td> 
+        <td><b>Day/Night</b> </td> 
+        <td><b>Rent/Catering</b></td> 
+        <td><b>Packs</b></td>
+      </tr>
+      </thead>
+       {% for bk in res %}
+       <tr>
+         <td><h6></h6></td>
+         <td><a href="/sindexdateoneshow/{{ bk.id }}">{{ bk.bname }}</a></td>
+         <td>{{ bk.bdate.strftime('%d-%m-%Y') }}</td>
+         <td>{{ bk.bdaynight }}</td>
+         <td>{{ bk.brentcat }}</td>
+         <td>{{ bk.bgathconf }}</td>
+      </tr>
+        
+       {% endfor %}
+
+     <tr>
+        <td colspan="5" align="center"><a href="/sindexdate/{{ bresort }}"><button class="btn btn-outline-primary"  type="Button"> Back </button></a> </td>
+      </tr>
+ 
+      </tbody>
+    </table>
+   </div>
+ {% endblock %}

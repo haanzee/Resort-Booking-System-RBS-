@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+   
+     <table align='center' class='table table-sm'>
+      <tbody>
+
+        <tr>
+           <td colspan="3" align="center"><b> Confirm Booking {{ sr_date  }}</b></td>
+        </tr>
+
+        {% for bk in rec %}
+        <tr>
+          <td>{{ bk.bresort }}</td><td>{{ bk.bdaynight }}</td><td>{{ bk.brentcat }}</td> <td>{{ bk.bgathconf }}</td>  
+        <tr>
+         {% endfor %}
+
+        <tr>
+           <td colspan="3" align="center"><b> Un-Confirm Booking {{ sr_date  }}</b></td>
+        </tr>
+
+        {% for bk in recn %}
+        <tr>
+          <td>{{ bk.bresort }}</td><td>{{ bk.bdaynight }}</td><td>{{ bk.brentcat }}</td> <td>{{ bk.bgathconf }}</td>  
+        <tr>
+         {% endfor %}
+
+
+             <tr>       
+
+                <td align="center" colspan="3"><a href="/sbooking">
+                  <button type="button> </button>"> Search Again </button>
+                  </a></td>
+             </tr>
+         </tbody>
+      </table>
+   </div>
+ {% endblock %}

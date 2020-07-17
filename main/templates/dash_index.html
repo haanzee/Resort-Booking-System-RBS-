@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+  
+      <table class="table table-striped" align='center' class='table table-sm'>
+      <tbody>
+        <tr><td colspan="3"><b>Confirmed Booking</b></td></tr>
+         {% for bk in res %}
+         <tr>
+           <td width='140px'><a href="/resort_index/{{ bk.bresort }}">{{ bk.bresort }}</a>
+              </td><td>:</td> <td>{{ bk.count }}</td>
+         </tr>
+        {% endfor %}
+
+        <tr><td colspan="3"><b>Confirmation Pending </b></td></tr>
+         {% for bkp in resno %}
+         <tr>
+           <td width='140px'><a href="/resort_indexp/{{ bkp.bresort }}">{{ bkp.bresort }}</a></td><td>:</td> <td>{{ bkp.count }}</td>
+         </tr>
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+ 
+
+   </div>
+ {% endblock %}

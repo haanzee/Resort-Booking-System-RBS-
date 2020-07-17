@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+   
+     <table align='center' class='table table-sm'>
+      <tbody>
+        <tr>
+          <td colspan="3" align='center'>Booking Authorization</td> 
+        </tr>
+        
+        {% for bk in booking %}
+        <tr>
+           <td colspan="3"> 
+            <b>Name                 : </b> {{ bk.bname }}<br>
+            <b>Contact No.          : </b> {{ bk.bcontact }} <br>
+            <b>Resort               : </b> {{ bk.bresort }}<br>
+            <b>Referene             : </b> {{ bk.bref }}<br>
+            <b>Booking date         : </b> {{ bk.bdate.strftime('%d-%m-%Y') }}<br>
+            <b>Day / Night          : </b> {{ bk.bdaynight }}<br>
+            <b>Rent / Cattering     : </b> {{ bk.brentcat }}<br>
+            <b>Confirmed Gathering  : </b> {{ bk.bgathconf }}<br>
+            <b>Booking By           : </b> {{ bk.author.username }}<br>
+
+            </td>
+           </tr>
+            <tr>       
+                  <td><font size="2px"><a href="/auth/{{bk.id}}"><input type="button" name="Authorised" value="Authorised"> </a></font></td>
+                  <td><font size="2px"><a href="/edit/{{bk.id}}"><input type="button" name="Update" value="Update"> </a></font></td>
+                  <td><font size="2px"><a href="/Delete/{{bk.id}}"><input type="button" name="Delete" value="Delete"></a></font></td>
+             </tr>
+           {% endfor %}
+
+         </tbody>
+      </table>
+   </div>
+ {% endblock %}

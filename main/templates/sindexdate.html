@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+  
+      <table class="table table-striped" align='center' class='table table-sm'>
+      <tbody>
+        <tr><td colspan="3" align='center'><b>Confirmed Booking (Month Date Wise) ( {{ bresort }} )</b></td></tr>
+         {% for bk in res %}
+         <tr>
+           <td width='140px'>
+            <a href="/sindexdateone?bresort={{ bk.bresort }}&bdate={{ bk.bdate.strftime('%d/%m/%Y') }}">
+            {{ bk.bdate.strftime('%d/%m/%Y')   }}</a>
+              </td><td>:</td> <td>{{ bk.count }}</td>
+         </tr>
+        {% endfor %}
+        <tr>
+          <td colspan="3" align="center">
+            <a href="/sindexmonth/{{ bresort }}"><button class="btn btn-outline-primary" type="Button"> Back </button> </a>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+ 
+
+   </div>
+ {% endblock %}
